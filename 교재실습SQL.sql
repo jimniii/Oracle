@@ -21,6 +21,9 @@
 
 --drop table professor purge ;
 
+
+
+
 create table professor
 (profno number(4) primary key,
  name  varchar2(20) not null, 

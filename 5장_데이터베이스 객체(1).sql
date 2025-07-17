@@ -1,0 +1,50 @@
+select table_name from user_tables;
+
+
+select owner, table_name from all_tables;
+
+// select * from dba_tables;
+
+
+SELECT * FROM USER_INDEXES;
+
+SELECT * FROM  SALE;
+
+SELECT * FROM USER_IND_COLUMNS;
+
+create index idx_user1_id on USER1(USER_ID);
+DROP index idx_user1_id;
+
+-- 실습하기 3-6
+
+create view VW_USER1 AS (SELECT NAME,HP,AGE FROM USER1);
+select * from user_ind_columns;
+
+CREATE VIEW VW_USER2_AGE_UNDER30 AS (SELECT * FROM USER2 WHERE AGE <30);
+
+SELECT * FROM USER_VIEWS;
+
+SELECT * FROM VW_USER2_AGE_UNDER30;
+
+DROP VIEW VW_USER1;
+DROP VIEW VW_USER2_AGE_UNDER30;
+
+CREATE TABLE USER6(
+SEQ NUMBER PRIMARY KEY,
+NAME VARCHAR2(20),
+GENDER CHAR(1),
+AGE NUMBER,
+ADDR VARCHAR2(255));
+
+CREATE SEQUENCE SEQ_USER6 INCREMENT BY 1 START WITH 1;
+
+INSERT INTO USER6 VALUES(SEQ_USER6.NEXTVAL, '김유신','M',25,'김해시');
+INSERT INTO USER6 VALUES(SEQ_USER6.NEXTVAL, '김춘추','M',23,'경주시');
+INSERT INTO USER6 VALUES(SEQ_USER6.NEXTVAL, '신사임당','F',27,'강릉시');
+
+
+-------------------------
+
+
+
+
